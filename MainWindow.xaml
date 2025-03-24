@@ -15,7 +15,6 @@
         <Label Content="Tartalom besorolás" HorizontalAlignment="Left" Margin="320,173,0,0" VerticalAlignment="Top"/>
         <Label Content="Megtekintések" HorizontalAlignment="Left" Margin="320,250,0,0" VerticalAlignment="Top"/>
         <Button x:Name="Ajanlat" Content="Kérem az ajánlatot" HorizontalAlignment="Left" Margin="390,332,0,0" VerticalAlignment="Top" Width="110" IsEnabled="False" Click="Ajanlat_Click"/>
-        <Label x:Name="teszt" Margin="535,319,42,69"/>
 
     </Grid>
 </Window>

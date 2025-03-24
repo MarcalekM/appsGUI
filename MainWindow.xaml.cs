@@ -24,7 +24,7 @@ namespace appsGUI
             foreach (var app in apps.DistinctBy(a => a.category.CategoryId)) Kategoriak.Items.Add(app.category.CategoryName);
             Kategoriak.SelectedIndex = 0;
 
-            name = AlkalmazasNevek.SelectedItem.ToString();
+            name = Kategoriak.SelectedItem.ToString();
         }
 
         private void Kategoriak_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -37,18 +37,18 @@ namespace appsGUI
 
         private void AlkalmazasNevek_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            teszt.Content = name;
             var app = apps.Find(a => a.ToString().Equals(AlkalmazasNevek.SelectedItem.ToString()));
             Verzio.Content = app.currentVer;
             Besorolas.Content = app.contentRating.ContentRatingName;
             Megtekintes.Content = app.reviews;
-            if(AlkalmazasNevek.SelectedItem.ToString().Equals(name)) Ajanlat.IsEnabled = true;
+            if(Kategoriak.SelectedItem.ToString().Equals(name)) Ajanlat.IsEnabled = true;
             else Ajanlat.IsEnabled = false;
-            name = AlkalmazasNevek.SelectedItem.ToString();
+            name = Kategoriak.SelectedItem.ToString();
         }
 
         private void Ajanlat_Click(object sender, RoutedEventArgs e)
         {
+            AlkalmazasNevek.SelectedIndex = Random.Shared.Next(0, AlkalmazasNevek.Items.Count);
             Ajanlat.IsEnabled = false;
         }
     }
