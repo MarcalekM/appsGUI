@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <ListBox x:Name="Kategoriak" Margin="10,29,555,56" SelectionChanged="Kategoriak_SelectionChanged"/>
+        <ListBox x:Name="Kategoriak" Margin="10,63,555,56" SelectionChanged="Kategoriak_SelectionChanged"/>
         <ComboBox x:Name="AlkalmazasNevek" HorizontalAlignment="Left" Margin="320,63,0,0" VerticalAlignment="Top" Width="360" SelectionChanged="AlkalmazasNevek_SelectionChanged"/>
         <Label x:Name="Verzio" Content="" HorizontalAlignment="Left" Margin="320,140,0,0" VerticalAlignment="Top"/>
         <Label x:Name="Besorolas" Content="" HorizontalAlignment="Left" Margin="320,0,0,0" VerticalAlignment="Center"/>
@@ -15,6 +15,12 @@
         <Label Content="Tartalom besorolás" HorizontalAlignment="Left" Margin="320,173,0,0" VerticalAlignment="Top"/>
         <Label Content="Megtekintések" HorizontalAlignment="Left" Margin="320,250,0,0" VerticalAlignment="Top"/>
         <Button x:Name="Ajanlat" Content="Kérem az ajánlatot" HorizontalAlignment="Left" Margin="390,332,0,0" VerticalAlignment="Top" Width="110" IsEnabled="False" Click="Ajanlat_Click"/>
+        <Label Content="Válasszon kategóriát!" HorizontalAlignment="Left" Margin="10,32,0,0" VerticalAlignment="Top" FontWeight="Bold" BorderThickness="1,1,1,1" BorderBrush="Black">
+            <Label.Style>
+                <Style/>
+            </Label.Style>
+        </Label>
+        <Label Content="Válasszon alkalmazást!" HorizontalAlignment="Left" Margin="320,35,0,0" VerticalAlignment="Top" Width="136" BorderBrush="Black" BorderThickness="1,1,1,1" FontWeight="Bold"/>
 
     </Grid>
 </Window>
